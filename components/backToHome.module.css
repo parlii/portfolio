@@ -1,0 +1,5 @@
+.backToHome {
+  display: flex;
+  margin: 3rem 0 0;
+  justify-content: flex-end;
+}
