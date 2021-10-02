@@ -3,8 +3,10 @@ import { GoogleMap, LoadScriptNext } from "@react-google-maps/api";
 import { Marker } from "@react-google-maps/api";
 import { InfoWindow } from "@react-google-maps/api";
 import { OverlayView } from "@react-google-maps/api";
+import getConfig from "next/config";
 // https://react-google-maps-api-docs.netlify.app/
 
+const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
 const containerStyle = {
   width: "1000px",
   height: "800px",
