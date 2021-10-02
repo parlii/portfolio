@@ -34,7 +34,7 @@ const divStyle = {
 
 function GMap() {
   return (
-    <LoadScriptNext googleMapsApiKey="AIzaSyBhXo3dTiUDb_RTL__jn39l2cSOb0OQVqk">
+    <LoadScriptNext googleMapsApiKey="">
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={7}>
         {/* Child components, such as markers, info windows, etc. */}
         <OverlayView
