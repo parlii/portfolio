@@ -8,10 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
-    "bootstrap": "^5.0.0-beta3",
+    "@react-google-maps/api": "^2.4.1",
+    "bootstrap": "^5.1.1",
     "bootstrap-next": "^1.0.5",
     "classnames": "^2.3.1",
+    "jquery": "^3.6.0",
     "next": "^11.0.0",
+    "popper.js": "^1.16.1",
     "react": "17.0.2",
     "react-bootstrap": "^2.0.0-rc.0",
     "react-dom": "17.0.2"

@@ -13,6 +13,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 export default function Example() {
+  var name = "Parli";
   return (
     <Layout home>
       <Head>

@@ -25,7 +25,6 @@ export default function Home() {
               errors via Sentry. Integrations using python SDK. VM hosted in
               Azure, data at AWS RDS. CI/CD managed using docker-compose.
               <p></p>
-              <p>Working on a demo version so you can explore.</p>
               <a href="https://app.rojgarinterpreting.com/">
                 Link to production!
               </a>
@@ -46,6 +45,26 @@ export default function Home() {
                 Write crawlers in python to search for Nepali artists across
                 Nepali music websites. Clean the data and post on the above rds.
               </p>
+            </Accordion.Body>
+          </Accordion.Item>
+          <Accordion.Item eventKey="2">
+            <Accordion.Header>
+              Map of weather stations in Nepal
+            </Accordion.Header>
+            <Accordion.Body>
+              Another idea. Display a map of Nepal with markers for the various
+              weather stations in Nepal.
+              <p></p>
+              https://opendatanepal.com/dataset/weather-station/
+              <p>More data here:</p>
+              <p>http://dhm.gov.np/meteorological-station/</p>
+              <p></p>
+              Would need to get Google Maps with the stations overlayed from the
+              above data.
+              <p></p>If possible, clicking on these weather stations would make
+              api calls to get weather data from that station.
+              <p></p>
+              <a href="/projects/map">Work in progress..</a>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

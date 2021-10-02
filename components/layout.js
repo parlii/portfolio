@@ -7,7 +7,7 @@ import Link from "next/link";
 const name = "Divesh Rizal";
 export const siteTitle = "Divesh Rizal parli.me";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, gmap }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -24,6 +24,7 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <header className={styles.header}>
         {home ? (
@@ -38,6 +39,13 @@ export default function Layout({ children, home }) {
               </Link>
             </h2> */}
           </>
+        )}
+        {gmap ? (
+          <>
+            <p>whats going on here</p>
+          </>
+        ) : (
+          <></>
         )}
       </header>
       <main>{children}</main>
