@@ -8,7 +8,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@react-google-maps/api": "^2.4.1",
     "bootstrap": "^5.1.1",
     "bootstrap-next": "^1.0.5",
     "classnames": "^2.3.1",

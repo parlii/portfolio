@@ -64,7 +64,7 @@ export default function Home() {
               <p></p>If possible, clicking on these weather stations would make
               api calls to get weather data from that station.
               <p></p>
-              <a href="/projects/map">Work in progress..</a>
+              <a href="https://google.com">Work in progress..</a>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
