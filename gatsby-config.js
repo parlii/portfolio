@@ -7,15 +7,15 @@ module.exports = {
     // Main Site Title
     title: `Divesh | Full-Stack Developer`,
     // Description that goes under your name in main bio
-    description: `Engineer by profession, Developer by passion`,
+    description: `Engineer by profession, developer by passion`,
     // Optional: Twitter account handle
-    author: `@`,
+    // author: `@`,
     // Optional: Github account URL
     github: `https://github.com/parlii`,
     // Optional: LinkedIn account URL
-    linkedin: `www.linkedin.com/in/divesh-rizal`,
+    linkedin: `https://www.linkedin.com/in/divesh-rizal`,
     // Content of the About Me section
-    about: `Checkout some apps I've built! Current interests are around LLM based applications, scalabale micro services, and cloud management.`,
+    about: `I like building full stack apps. Current interests are LLM based apps, scalabale micro services, and cloud management.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
