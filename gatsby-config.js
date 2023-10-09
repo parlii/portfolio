@@ -15,7 +15,7 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/divesh-rizal`,
     // Content of the About Me section
-    about: `I like building full stack apps. Current interests are LLM based apps, scalabale micro services, and cloud management.`,
+    // about: `I like building full stack apps. Current interests are LLM based apps, scalabale micro services, and cloud management.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
