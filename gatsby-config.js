@@ -31,11 +31,24 @@ module.exports = {
         link: 'https://bit.ly/ask-bitly-docs',
       },
       {
+        name: 'Reverse Lookup',
+        description:
+          'Reverse lookup a word from a given description',
+        link: 'https://reverse-lookup.vercel.app/',
+      },
+      {
         name: 'Bitly Card',
         description:
           'A beautiful short link card generator with multiple themes',
         link: 'https://bitly-card2.vercel.app/',
       },
+      {
+        name: 'Play Trivia',
+        description:
+          'GPT4 based trivia game on any topic!',
+        link: 'https://play-trivia.vercel.app/',
+      },
+
     ],
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
