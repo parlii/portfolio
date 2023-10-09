@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import get from 'lodash/get';
 import React from 'react';
 
-import profileImg from '../../images/profile.jpg';
+import profileImg from '../../images/profile-succulent.jpg';
 
 const classes = {
   wrapper: 'block mb-6 md:flex',
@@ -35,6 +35,11 @@ const Header = ({ metadata = {}, noBlog = false }) => {
         </h1>
         <p className={classes.description}>{metadata.description}</p>
         <ul className={classes.list}>
+          <li className={classes.item}>
+            <a className={classes.link} href="/static/resume.pdf" download="Divesh_Rizal_Resume.pdf">
+              Resume
+            </a>
+          </li>
           {twitter && (
             <li className={classes.item}>
               <a
