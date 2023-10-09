@@ -1,75 +1,70 @@
 module.exports = {
   siteMetadata: {
     // Site URL for when it goes live
-    siteUrl: `https://elastic-meninsky-aa7c74.netlify.app/`,
+    siteUrl: `https://divesh.dev/`,
     // Your Name
-    name: 'Ryan Fitzgerald',
+    name: 'Divesh Rizal',
     // Main Site Title
-    title: `Ryan Fitzgerald | Full-Stack Developer`,
+    title: `Divesh | Full-Stack Developer`,
     // Description that goes under your name in main bio
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit, ipsum.`,
+    description: `Engineer by profession, Developer by passion`,
     // Optional: Twitter account handle
-    author: `@rfitzio`,
+    author: `@`,
     // Optional: Github account URL
-    github: `https://github.com/ryanfitzgerald`,
+    github: `https://github.com/parlii`,
     // Optional: LinkedIn account URL
-    linkedin: `https://www.linkedin.com/in/ryanafitzgerald/`,
+    linkedin: `www.linkedin.com/in/divesh-rizal`,
     // Content of the About Me section
-    about: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus perferendis porro cumque ea error ab voluptatem. Temporibus adipisci exercitationem similique itaque quibusdam laudantium, qui molestiae quas, aut amet animi id.`,
+    about: `Checkout some apps I've built! Current interests are around LLM based applications, scalabale micro services, and cloud management.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
-        name: 'Devfolio',
+        name: 'Bitly AI Chatbot',
         description:
-          'A zero-config and blazing fast personal site + blog built with GatsbyJs and TailwindCSS',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+          'An LLM based chatbot with function calling to support shortening links, fetching metrics, and more',
+        link: 'https://chauncey.vercel.app',
       },
       {
-        name: 'ChromeExtensionKit',
+        name: 'Ask Internal Docs',
         description:
-          'Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates',
-        link: 'https://chromeextensionkit.com/?ref=devfolio',
+          'Retrieval based QA application for internal documentation',
+        link: 'https://bit.ly/ask-bitly-docs',
       },
       {
-        name: 'Another Cool Project',
+        name: 'Bitly Card',
         description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit ducimus perferendis',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+          'A beautiful short link card generator with multiple themes',
+        link: 'https://bitly-card2.vercel.app/',
       },
     ],
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
       {
-        name: 'Acme Corp',
-        description: 'Full-Stack Developer, February 2020 - Present',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
+        name: 'Bitly',
+        description: 'Senior Software Engineer, December 2021 - Present',
+        link: 'https://www.bitly.com',
       },
       {
-        name: 'Globex Corp',
-        description: 'Full-Stack Developer, December 2017 - February 2020',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
-      },
-      {
-        name: 'Hooli',
-        description: 'Full-Stack Developer, May 2015 - December 2017',
-        link: 'https://github.com/RyanFitzgerald/devfolio',
-      },
+        name: 'Pegasystems',
+        description: 'Senior Systems Architect, July 2017 - December 2021',
+        link: 'https://www.pega.com/',
+      }
     ],
     // Optional: List your skills, they must have `name` and `description`.
     skills: [
       {
         name: 'Languages & Frameworks',
         description:
-          'JavaScript (ES6+), Golang, Node.js, Express.js, React, Ruby on Rails, PHP',
+          'JavaScript (ES6+), Golang, Node.js, Python, Django, NextJS',
       },
       {
         name: 'Databases',
-        description: 'MongoDB, PostreSQL, MySQL',
+        description: 'PostreSQL, MySQL, Google Bigtable, Redis',
       },
       {
         name: 'Other',
         description:
-          'Docker, Amazon Web Services (AWS), CI / CD, Microservices, API design, Agile / Scrum',
+          'Docker, GCP, AWS, CI / CD, Microservices, API design, Agile / Scrum',
       },
     ],
   },
