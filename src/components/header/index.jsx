@@ -36,7 +36,7 @@ const Header = ({ metadata = {}, noBlog = false }) => {
         <p className={classes.description}>{metadata.description}</p>
         <ul className={classes.list}>
           <li className={classes.item}>
-            <a className={classes.link} href="/static/resume.pdf" download="Divesh_Rizal_Resume.pdf">
+            <a className={classes.link} href="/resume.pdf" download="Divesh_Rizal_Resume.pdf">
               Resume
             </a>
           </li>
