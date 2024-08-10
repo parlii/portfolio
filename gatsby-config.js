@@ -5,7 +5,7 @@ module.exports = {
     // Your Name
     name: 'Divesh Rizal',
     // Main Site Title
-    title: `Divesh | Full-Stack Developer`,
+    title: `Divesh | Senior Software Engineer`,
     // Description that goes under your name in main bio
     description: `Engineer by profession, developer by passion`,
     // Optional: Twitter account handle
@@ -19,16 +19,16 @@ module.exports = {
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
+        name: 'VSCode Extension',
+        description:
+          'A VSCode Extension providing codelens, tree views, and tooling helpful for Bitly developers',
+        link: 'https://chauncey.vercel.app',
+      },
+      {
         name: 'Bitly AI Chatbot',
         description:
           'An LLM based chatbot with function calling to support shortening links, fetching metrics, and more',
         link: 'https://chauncey.vercel.app',
-      },
-      {
-        name: 'Ask Internal Docs',
-        description:
-          'Retrieval based QA application for internal documentation',
-        link: 'https://bit.ly/ask-bitly-docs',
       },
       {
         name: 'Reverse Lookup',
@@ -48,7 +48,6 @@ module.exports = {
           'GPT4 based trivia game on any topic!',
         link: 'https://play-trivia.vercel.app/',
       },
-
     ],
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
@@ -68,16 +67,16 @@ module.exports = {
       {
         name: 'Languages & Frameworks',
         description:
-          'JavaScript (ES6+), Golang, Node.js, Python, Django, NextJS',
+          'Golang, Python, Javascript (ES6+), Typescript, NextJS, Node.js',
       },
       {
         name: 'Databases',
         description: 'PostreSQL, MySQL, Google Bigtable, Redis',
       },
       {
-        name: 'Other',
+        name: 'Other Skills',
         description:
-          'Docker, GCP, AWS, CI / CD, Microservices, API design, Agile / Scrum',
+          'Docker, GCP, AWS, CI / CD, Microservice Architecture, Messaging infrastructure, API design, Agile / Scrum',
       },
     ],
   },
