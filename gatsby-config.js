@@ -22,7 +22,7 @@ module.exports = {
         name: 'VSCode Extension',
         description:
           'A VSCode Extension providing codelens, tree views, and tooling helpful for Bitly developers',
-        link: 'https://chauncey.vercel.app',
+        link: 'https://github.com/parlii/bitlens',
       },
       {
         name: 'Bitly AI Chatbot',
