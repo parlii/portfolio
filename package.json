@@ -5,11 +5,19 @@
   "version": "0.1.0",
   "author": "Divesh Rizal",
   "dependencies": {
+    "@babel/plugin-transform-class-properties": "^7.25.4",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.24.7",
+    "@babel/plugin-transform-numeric-separator": "^7.24.7",
+    "@babel/plugin-transform-object-rest-spread": "^7.24.7",
+    "@babel/plugin-transform-optional-chaining": "^7.24.8",
+    "@sideway/address": "^5.0.0",
+    "axios": "^1.7.7",
+    "body-parser": "^1.20.3",
+    "core-js": "^3.38.1",
+    "date-fns": "^3.6.0",
     "gatsby": "^5.13.7",
     "gatsby-plugin-feed": "^5.13.1",
-    "gatsby-plugin-google-analytics": "^5.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
-    "gatsby-plugin-offline": "^6.13.3",
     "gatsby-plugin-postcss": "^6.13.1",
     "gatsby-plugin-react-helmet": "^6.13.1",
     "gatsby-remark-copy-linked-files": "^6.13.2",
@@ -20,23 +28,23 @@
     "gatsby-source-filesystem": "^5.13.1",
     "gatsby-transformer-remark": "^6.13.1",
     "gatsby-transformer-sharp": "^5.13.1",
-    "lodash": "^4.17.20",
-    "moment": "^2.29.1",
-    "postcss": "^8.1.1",
+    "glob": "^11.0.0",
+    "joi": "^17.13.3",
+    "lodash.template": "^4.5.0",
+    "path-to-regexp": "^8.1.0",
+    "postcss": "^8.4.45",
     "prismjs": "^1.22.0",
     "prop-types": "^15.7.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-github-calendar": "^4.3.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "rimraf": "^6.0.1",
+    "webpack-dev-middleware": "^7.4.2"
   },
   "devDependencies": {
-    "npm-force-resolutions": "^0.0.10",
     "prettier": "2.1.2",
     "tailwindcss": "^1.8.13"
-  },
-  "resolutions": {
-    "punycode": "^2.0.0"
   },
   "keywords": [
     "gatsby"
@@ -48,8 +56,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "preinstall": "npx npm-force-resolutions"
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
@@ -57,5 +64,10 @@
   },
   "bugs": {
     "url": "https://github.com/parlii/devfolio/issues"
+  },
+  "overrides": {
+    "react-server-dom-webpack@0.0.0-experimental-c8b778b7f-20220825": {
+      "react": "^18.0.0"
+    }
   }
 }

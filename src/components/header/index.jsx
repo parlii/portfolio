@@ -1,5 +1,4 @@
 import { Link } from 'gatsby';
-import get from 'lodash/get';
 import React from 'react';
 
 import profileImg from '../../images/profile-succulent.jpg';
@@ -14,13 +13,13 @@ const classes = {
   list: 'mt-6 uppercase tracking-wider',
   item: 'inline list-none pr-4',
   link:
-    'inline-block py-2 font-semibold text-xs text-gray-600 hover:text-black'
+    'inline-block py-2 font-semibold text-xs text-gray-600 hover:text-black',
 };
 
 const Header = ({ metadata = {}, noBlog = false }) => {
-  const twitter = get(metadata, 'author', false);
-  const github = get(metadata, 'github', false);
-  const linkedin = get(metadata, 'linkedin', false);
+  const twitter = metadata?.author ?? false;
+  const github = metadata?.github ?? false;
+  const linkedin = metadata?.linkedin ?? false;
 
   return (
     <div className={classes.wrapper}>

@@ -10,12 +10,22 @@ const classes = {
   bulletPoint: 'list-disc ml-4',
 };
 
-const SummaryItem = ({ name, description, detailedDescription, link = false, internal = false }) => {
+const SummaryItem = ({
+  name,
+  description,
+  detailedDescription,
+  link = false,
+  internal = false,
+}) => {
   const [expanded, setExpanded] = useState(false);
 
   let linkContent = name;
   if (link) {
-    linkContent = internal ? <Link to={link}>{name}</Link> : <a href={link}>{name}</a>;
+    linkContent = internal ? (
+      <Link to={link}>{name}</Link>
+    ) : (
+      <a href={link}>{name}</a>
+    );
   }
 
   return (
@@ -40,7 +50,9 @@ const SummaryItem = ({ name, description, detailedDescription, link = false, int
           {expanded && (
             <ul className={classes.detailedDescription}>
               {detailedDescription.map((item, index) => (
-                <li key={index} className={classes.bulletPoint}>{item}</li>
+                <li key={index} className={classes.bulletPoint}>
+                  {item}
+                </li>
               ))}
             </ul>
           )}

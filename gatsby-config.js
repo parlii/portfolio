@@ -13,13 +13,13 @@ module.exports = {
         description:
           'A VSCode Extension providing codelens, tree views, and tooling helpful for Bitly developers',
         detailedDescription: [
-          "Generate curl commands from code",
-          "Open GCP logs with relevant queries",
-          "Run and debug Go services",
-          "Search documentation",
-          "Open Graphite URLs for endpoints",
-          "Access local log files",
-          "Auto-update functionality"
+          'Generate curl commands from code',
+          'Open GCP logs with relevant queries',
+          'Run and debug Go services',
+          'Search documentation',
+          'Open Graphite URLs for endpoints',
+          'Access local log files',
+          'Auto-update functionality',
         ],
         link: '',
       },
@@ -134,14 +134,14 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
+              return allMarkdownRemark.nodes.map((node) => {
                 return {
                   ...node.frontmatter,
                   description: node.excerpt,
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
+                  custom_elements: [{ 'content:encoded': node.html }],
                 };
               });
             },
@@ -162,17 +162,11 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
+            output: '/rss.xml',
             title: "Divesh Rizal's RSS Feed",
-            match: "^/blog/",
+            match: '^/blog/',
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `ADD YOUR TRACKING ID HERE`, // Optional Google Analytics
       },
     },
     {

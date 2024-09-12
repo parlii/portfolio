@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import moment from 'moment';
+import { format } from 'date-fns'; // Import from date-fns
 import React from 'react';
 
 import Header from '../components/header';
@@ -21,7 +21,8 @@ const BlogPost = ({ data }) => {
       <SEO title={post.frontmatter.title} />
       <h1 className={classes.title}>{post.frontmatter.title}</h1>
       <p className={classes.date}>
-        Posted on {moment(post.frontmatter.date).format('MMMM D, YYYY')}
+        Posted on {format(new Date(post.frontmatter.date), 'MMMM d, yyyy')}{' '}
+        {/* Replaced moment with date-fns format */}
       </p>
       <div
         className={classes.wrapper}

@@ -1,7 +1,5 @@
 import { graphql } from 'gatsby';
-import get from 'lodash/get';
 import React from 'react';
-
 import Header from '../components/header';
 import Layout from '../components/layout';
 import SectionAbout from '../components/section-about';
@@ -12,32 +10,31 @@ import SectionSkills from '../components/section-skills';
 import SEO from '../components/seo';
 import GitHubContributions from '../components/github-calendar/GithubCalendar';
 
-
 const Index = ({ data }) => {
-  const about = get(data, 'site.siteMetadata.about', false);
-  const projects = get(data, 'site.siteMetadata.projects', false);
+  const about = data.site.siteMetadata.about ?? false;
+  const projects = data.site.siteMetadata.projects ?? false;
   const posts = data.allMarkdownRemark.edges;
-  const experience = get(data, 'site.siteMetadata.experience', false);
-  const skills = get(data, 'site.siteMetadata.skills', false);
+  const experience = data.site.siteMetadata.experience ?? false;
+  const skills = data.site.siteMetadata.skills ?? false;
   const noBlog = !posts || !posts.length;
 
   return (
     <>
-    <Layout>
-      <SEO />
-      <Header metadata={data.site.siteMetadata} noBlog={noBlog} />
-      {about && <SectionAbout about={about} />}
-      {projects && projects.length && <SectionProjects projects={projects} />}
-      {!noBlog && <SectionBlog posts={posts} />}
-      {experience && experience.length && (
-        <SectionExperience experience={experience} />
-      )}
-      {skills && skills.length && <SectionSkills skills={skills} />}
+      <Layout>
+        <SEO />
+        <Header metadata={data.site.siteMetadata} noBlog={noBlog} />
+        {about && <SectionAbout about={about} />}
+        {projects && projects.length && <SectionProjects projects={projects} />}
+        {!noBlog && <SectionBlog posts={posts} />}
+        {experience && experience.length && (
+          <SectionExperience experience={experience} />
+        )}
+        {skills && skills.length && <SectionSkills skills={skills} />}
       </Layout>
-      <div className='mt-5'>
+      <div className="mt-5">
         <GitHubContributions />
       </div>
-      </>
+    </>
   );
 };
 
