@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from "@vercel/analytics/react"
 
 const classes = {
   wrapper: 'p-4 relative max-w-screen-xl xs:p-12',
@@ -42,6 +43,7 @@ const Layout = ({ children }) => {
         />
       </svg>
       <div className={classes.wrapper}>{children}</div>
+      <Analytics />
     </div>
   );
 };
