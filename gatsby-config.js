@@ -7,7 +7,7 @@ module.exports = {
     // Main Site Title
     title: `Divesh | Senior Software Engineer`,
     // Description that goes under your name in main bio
-    description: `Engineer by profession, developer by passion`,
+    description: `Always learning!`,
     // Optional: Twitter account handle
     // author: `@`,
     // Optional: Github account URL
@@ -15,14 +15,15 @@ module.exports = {
     // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/divesh-rizal`,
     // Content of the About Me section
-    // about: `I like building full stack apps. Current interests are LLM based apps, scalabale micro services, and cloud management.`,
+    about: `I like building full stack apps. Current interests are LLM based apps, scalabale micro services, and cloud management.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     projects: [
       {
         name: 'VSCode Extension',
         description:
           'A VSCode Extension providing codelens, tree views, and tooling helpful for Bitly developers',
-        link: 'https://github.com/parlii/bitlens',
+        detailedDescription: "This extension includes features such as generating curl commands, opening GCP logs with relevant queries, running and debugging Go services, searching documentation, opening Graphite URLs for endpoints, accessing local log files, and auto-updating.",
+        link: '',
       },
       {
         name: 'Bitly AI Chatbot',
