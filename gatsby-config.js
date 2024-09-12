@@ -3,25 +3,15 @@ module.exports = {
     siteUrl: `https://divesh.dev/`,
     name: 'Divesh Rizal',
     title: `Divesh | Senior Software Engineer`,
-    description: `Always learning!`,
     github: `https://github.com/parlii`,
     linkedin: `https://www.linkedin.com/in/divesh-rizal`,
     about: `Committed to writing clean, efficient code and mentoring fellow developers.`,
     projects: [
       {
-        name: 'VSCode Extension',
+        name: 'Bitlens',
         description:
-          'A VSCode Extension providing codelens, tree views, and tooling helpful for Bitly developers',
-        detailedDescription: [
-          'Generate curl commands from code',
-          'Open GCP logs with relevant queries',
-          'Run and debug Go services',
-          'Search documentation',
-          'Open Graphite URLs for endpoints',
-          'Access local log files',
-          'Auto-update functionality',
-        ],
-        link: '',
+          'A vscode extension providing codelens, tree views, and tooling helpful for Bitly developers',
+        link: '/blog/bitlens',
       },
       {
         name: 'Bitly AI Chatbot',
@@ -54,7 +44,7 @@ module.exports = {
       },
       {
         name: 'Pegasystems',
-        description: 'Senior Systems Architect, July 2017 - December 2021',
+        description: 'Systems Architect, July 2017 - December 2021',
         link: 'https://www.pega.com/',
       },
     ],

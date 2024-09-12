@@ -39,6 +39,7 @@
     "react-dom": "^18.2.0",
     "react-github-calendar": "^4.3.0",
     "react-helmet": "^6.1.0",
+    "react-tooltip": "^5.28.0",
     "rimraf": "^6.0.1",
     "webpack-dev-middleware": "^7.4.2"
   },
