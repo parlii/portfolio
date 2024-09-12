@@ -14,7 +14,7 @@ const classes = {
   list: 'mt-6 uppercase tracking-wider',
   item: 'inline list-none pr-4',
   link:
-    'inline-block py-2 font-semibold text-xs text-gray-600 hover:text-black',
+    'inline-block py-2 font-semibold text-xs text-gray-600 hover:text-black'
 };
 
 const Header = ({ metadata = {}, noBlog = false }) => {
@@ -36,7 +36,11 @@ const Header = ({ metadata = {}, noBlog = false }) => {
         <p className={classes.description}>{metadata.description}</p>
         <ul className={classes.list}>
           <li className={classes.item}>
-            <a className={classes.link} href="/resume.pdf" download="Divesh_Rizal_Resume.pdf">
+            <a
+              className={classes.link}
+              href="/resume.pdf"
+              download="Divesh_Rizal_Resume.pdf"
+            >
               Resume
             </a>
           </li>

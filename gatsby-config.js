@@ -1,28 +1,26 @@
 module.exports = {
   siteMetadata: {
-    // Site URL for when it goes live
     siteUrl: `https://divesh.dev/`,
-    // Your Name
     name: 'Divesh Rizal',
-    // Main Site Title
     title: `Divesh | Senior Software Engineer`,
-    // Description that goes under your name in main bio
     description: `Always learning!`,
-    // Optional: Twitter account handle
-    // author: `@`,
-    // Optional: Github account URL
     github: `https://github.com/parlii`,
-    // Optional: LinkedIn account URL
     linkedin: `https://www.linkedin.com/in/divesh-rizal`,
-    // Content of the About Me section
-    about: `I like building full stack apps. Current interests are LLM based apps, scalabale micro services, and cloud management.`,
-    // Optional: List your projects, they must have `name` and `description`. `link` is optional.
+    about: `Committed to writing clean, efficient code and mentoring fellow developers.`,
     projects: [
       {
         name: 'VSCode Extension',
         description:
           'A VSCode Extension providing codelens, tree views, and tooling helpful for Bitly developers',
-        detailedDescription: "This extension includes features such as generating curl commands, opening GCP logs with relevant queries, running and debugging Go services, searching documentation, opening Graphite URLs for endpoints, accessing local log files, and auto-updating.",
+        detailedDescription: [
+          "Generate curl commands from code",
+          "Open GCP logs with relevant queries",
+          "Run and debug Go services",
+          "Search documentation",
+          "Open Graphite URLs for endpoints",
+          "Access local log files",
+          "Auto-update functionality"
+        ],
         link: '',
       },
       {
@@ -33,8 +31,7 @@ module.exports = {
       },
       {
         name: 'Reverse Lookup',
-        description:
-          'Reverse lookup a word from a given description',
+        description: 'Reverse lookup a word from a given description',
         link: 'https://reverse-lookup.vercel.app/',
       },
       {
@@ -45,12 +42,10 @@ module.exports = {
       },
       {
         name: 'Play Trivia',
-        description:
-          'GPT4 based trivia game on any topic!',
+        description: 'GPT4 based trivia game on any topic!',
         link: 'https://play-trivia.vercel.app/',
       },
     ],
-    // Optional: List your experience, they must have `name` and `description`. `link` is optional.
     experience: [
       {
         name: 'Bitly',
@@ -61,9 +56,8 @@ module.exports = {
         name: 'Pegasystems',
         description: 'Senior Systems Architect, July 2017 - December 2021',
         link: 'https://www.pega.com/',
-      }
+      },
     ],
-    // Optional: List your skills, they must have `name` and `description`.
     skills: [
       {
         name: 'Languages & Frameworks',
@@ -123,7 +117,58 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
-    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map(node => {
+                return {
+                  ...node.frontmatter,
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                };
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] }
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields { slug }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Divesh Rizal's RSS Feed",
+            match: "^/blog/",
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

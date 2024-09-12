@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const classes = {
   wrapper: 'mb-6',
@@ -7,24 +7,16 @@ const classes = {
   description: 'text-md text-gray-600 font-light',
   detailedDescription: 'text-sm text-gray-500 mt-2',
   expandButton: 'text-sm text-blue-500 mt-1 cursor-pointer',
+  bulletPoint: 'list-disc ml-4',
 };
 
 const SummaryItem = ({ name, description, detailedDescription, link = false, internal = false }) => {
   const [expanded, setExpanded] = useState(false);
 
-  useEffect(() => {
-    console.log('SummaryItem rendered:', { name, description, detailedDescription, link, internal });
-  }, [name, description, detailedDescription, link, internal]);
-
   let linkContent = name;
   if (link) {
     linkContent = internal ? <Link to={link}>{name}</Link> : <a href={link}>{name}</a>;
   }
-
-  const toggleExpand = () => {
-    setExpanded(!expanded);
-    console.log('Expanded state toggled:', !expanded);
-  };
 
   return (
     <div className={classes.wrapper}>
@@ -36,17 +28,21 @@ const SummaryItem = ({ name, description, detailedDescription, link = false, int
         {link ? linkContent : name}
       </h3>
       <p className={classes.description}>{description}</p>
-      {detailedDescription && (
+      {detailedDescription && detailedDescription.length > 0 && (
         <>
           <button
             className={classes.expandButton}
-            onClick={toggleExpand}
+            onClick={() => setExpanded(!expanded)}
             aria-expanded={expanded}
           >
-            {expanded ? 'Show less' : 'Show more'}
+            {expanded ? 'Show less' : 'Show more details'}
           </button>
           {expanded && (
-            <p className={classes.detailedDescription}>{detailedDescription}</p>
+            <ul className={classes.detailedDescription}>
+              {detailedDescription.map((item, index) => (
+                <li key={index} className={classes.bulletPoint}>{item}</li>
+              ))}
+            </ul>
           )}
         </>
       )}

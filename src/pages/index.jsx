@@ -10,6 +10,8 @@ import SectionExperience from '../components/section-experience';
 import SectionProjects from '../components/section-projects';
 import SectionSkills from '../components/section-skills';
 import SEO from '../components/seo';
+import GitHubContributions from '../components/github-calendar/GithubCalendar';
+
 
 const Index = ({ data }) => {
   const about = get(data, 'site.siteMetadata.about', false);
@@ -20,6 +22,7 @@ const Index = ({ data }) => {
   const noBlog = !posts || !posts.length;
 
   return (
+    <>
     <Layout>
       <SEO />
       <Header metadata={data.site.siteMetadata} noBlog={noBlog} />
@@ -30,7 +33,11 @@ const Index = ({ data }) => {
         <SectionExperience experience={experience} />
       )}
       {skills && skills.length && <SectionSkills skills={skills} />}
-    </Layout>
+      </Layout>
+      <div className='mt-5'>
+        <GitHubContributions />
+      </div>
+      </>
   );
 };
 
