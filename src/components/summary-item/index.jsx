@@ -24,7 +24,7 @@ const SummaryItem = ({
     linkContent = internal ? (
       <Link to={link}>{name}</Link>
     ) : (
-      <a href={link}>{name}</a>
+      <a href={link} target="_blank" rel="noopener noreferrer">{name}</a>
     );
   }
 

@@ -24,6 +24,7 @@ const SectionProjects = ({ projects }) => {
             description={project.description}
             detailedDescription={project.detailedDescription}
             link={project.link}
+            internal={project.link.startsWith('/')}
           />
         );
       })}
