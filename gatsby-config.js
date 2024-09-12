@@ -7,12 +7,12 @@ module.exports = {
     linkedin: `https://www.linkedin.com/in/divesh-rizal`,
     about: `Committed to writing clean, efficient code and mentoring fellow developers.`,
     projects: [
-      {
-        name: 'Bitlens',
-        description:
-          'A vscode extension providing codelens, tree views, and tooling helpful for Bitly developers',
-        link: '/blog/bitlens',
-      },
+      // {
+      //   name: 'Bitlens',
+      //   description:
+      //     'A vscode extension providing codelens, tree views, and tooling helpful for Bitly developers',
+      //   link: '/blog/bitlens',
+      // },
       {
         name: 'Bitly AI Chatbot',
         description:
