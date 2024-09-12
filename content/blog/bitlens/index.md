@@ -25,7 +25,7 @@ As I delved deeper into the project, Bitlens began to take shape. What started a
 
 One of the most satisfying moments was when I implemented the code lens features for Go files. Seeing those little actionable links appear above my code, offering to generate curl commands or search logs, felt like a small triumph. It was as if my editor was now anticipating my needs, saving me countless clicks and context switches.
 
-![BitLens](/static/bitlens.png)
+![BitLens](/bitlens.png)
 
 ## Overcoming Challenges
 

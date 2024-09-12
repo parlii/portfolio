@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-import profileImg from '../../images/profile-succulent.jpg';
+import profileImg from '/static/profile-succulent.jpg';
 
 const classes = {
   wrapper: 'block mb-6 md:flex',
