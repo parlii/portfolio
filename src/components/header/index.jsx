@@ -37,8 +37,7 @@ const Header = ({ metadata = {}, noBlog = false }) => {
           <li className={classes.item}>
             <a
               className={classes.link}
-              href="/resume.pdf"
-              download="Divesh_Rizal_Resume.pdf"
+              href="/Divesh_Rizal_Resume.pdf"
             >
               Resume
             </a>
