@@ -4,6 +4,7 @@ import Header from '../components/header';
 import Layout from '../components/layout';
 import SectionAbout from '../components/section-about';
 import SectionBlog from '../components/section-blog';
+import SectionCustomGPTs from '../components/section-custom-gpts';
 import SectionExperience from '../components/section-experience';
 import SectionProjects from '../components/section-projects';
 import SectionSkills from '../components/section-skills';
@@ -16,6 +17,7 @@ const Index = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   const experience = data.site.siteMetadata.experience ?? false;
   const skills = data.site.siteMetadata.skills ?? false;
+  const customGPTs = data.site.siteMetadata.customGPTs ?? false;
   const noBlog = !posts || !posts.length;
 
   return (
@@ -26,6 +28,7 @@ const Index = ({ data }) => {
         {about && <SectionAbout about={about} />}
         {!noBlog && <SectionBlog posts={posts} />}
         {projects && projects.length && <SectionProjects projects={projects} />}
+        {customGPTs && <SectionCustomGPTs customGPTs={customGPTs} />}
         {experience && experience.length && (
           <SectionExperience experience={experience} />
         )}
@@ -56,6 +59,13 @@ export const pageQuery = graphql`
           description
           detailedDescription
           link
+        }
+        customGPTs {
+          created {
+            name
+            description
+            link
+          }
         }
         experience {
           name
