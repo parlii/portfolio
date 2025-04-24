@@ -36,6 +36,15 @@ module.exports = {
         link: 'https://play-trivia.vercel.app/',
       },
     ],
+    customGPTs: {
+      created: [
+        {
+          name: 'Thoughtful Engineer',
+          description: 'Reviews messages (PR comments, slack messages, etc) and provides feedback for better communication',
+          link: 'https://chatgpt.com/g/g-67ddbd40b1d48191ba9799d14b11520c-thoughtful-engineer',
+        },
+      ],
+    },
     experience: [
       {
         name: 'Bitly',
