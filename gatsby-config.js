@@ -14,6 +14,11 @@ module.exports = {
       //   link: '/blog/bitlens',
       // },
       {
+        name: 'Nepali English Interpreter',
+        description: 'An AI based interpreter that translates between Nepali and English',
+        link: 'https://interpreter-app-snowy.vercel.app/',
+      },
+      {
         name: 'Bitly AI Chatbot',
         description:
           'An LLM based chatbot with function calling to support shortening links, fetching metrics, and more',
